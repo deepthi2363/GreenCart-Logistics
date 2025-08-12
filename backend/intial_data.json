@@ -1,0 +1,62 @@
+{
+  "drivers": [
+    {
+      "name": "Raj",
+      "currentShiftHours": 2,
+      "past7DaysHours": [8, 7, 9, 6, 8, 5, 4],
+      "isActive": true
+    },
+    {
+      "name": "Priya",
+      "currentShiftHours": 3,
+      "past7DaysHours": [6, 6, 6, 6, 6, 6, 6],
+      "isActive": true
+    },
+    {
+      "name": "Amit",
+      "currentShiftHours": 5,
+      "past7DaysHours": [9, 8, 7, 9, 8, 7, 8],
+      "isActive": true
+    }
+  ],
+  "routes": [
+    {
+      "routeId": "R1",
+      "distanceKm": 12,
+      "trafficLevel": "High",
+      "baseTimeMinutes": 30
+    },
+    {
+      "routeId": "R2",
+      "distanceKm": 8,
+      "trafficLevel": "Low",
+      "baseTimeMinutes": 20
+    },
+    {
+      "routeId": "R3",
+      "distanceKm": 15,
+      "trafficLevel": "Medium",
+      "baseTimeMinutes": 35
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "O1",
+      "valueRs": 1200,
+      "assignedRoute": "R1",
+      "deliveryTimestamp": "2025-08-12T10:00:00Z"
+    },
+    {
+      "orderId": "O2",
+      "valueRs": 900,
+      "assignedRoute": "R2",
+      "deliveryTimestamp": "2025-08-12T11:00:00Z"
+    },
+    {
+      "orderId": "O3",
+      "valueRs": 1500,
+      "assignedRoute": "R3",
+      "deliveryTimestamp": "2025-08-12T12:30:00Z"
+    }
+  ]
+}

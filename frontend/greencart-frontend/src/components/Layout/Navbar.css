@@ -1,0 +1,21 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  margin-right: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav-link.active {
+  color: #f39c12;
+  border-bottom: 2px solid #f39c12;
+}
