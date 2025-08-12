@@ -49,7 +49,7 @@ app.use("/api/routes", routesRouter);
 app.use("/api/orders", ordersRouter);
 
 // Example for simulation route (only accessible by manager)
-app.use('/api/simulation', authMiddleware, simulationRouter);
+//app.use('/api/simulation', authMiddleware, simulationRouter);
 app.use('/api', simulationHistoryRoutes);
 
 
