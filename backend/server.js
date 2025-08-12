@@ -18,13 +18,25 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://greencartlogistics.netlify.app/'  // your deployed frontend URL
+];
+
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like Postman or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
-app.use(express.json());
+
 
 
 
